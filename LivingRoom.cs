@@ -1,21 +1,12 @@
 ﻿using System;
 
 
-namespace NarrativeProject.Rooms
+namespace NarrativeProject
 {
-    internal class LivingRoom : Room
+    internal class LivingRoom 
     {
 
-        internal override string CreateDescription() =>
-            @" dfsldjkfls";
-        
-            
-        
-
-        internal override void ReceiveChoice(string choice)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
 
