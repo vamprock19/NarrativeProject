@@ -1,4 +1,4 @@
-﻿using NarrativeProject.Rooms;
+using NarrativeProject.Rooms;
 using System;
 
 namespace NarrativeProject
@@ -7,7 +7,15 @@ namespace NarrativeProject
     {
         static void Main(string[] args)
         {
+
+            // constructor
+            // YHEP 
             var game = new Game();
+            
+
+            /* if you want to start from a different position
+             * just move the variable to the top (initial value)*/
+
             game.Add(new Bedroom());
             game.Add(new Bathroom());
             game.Add(new AtticRoom());

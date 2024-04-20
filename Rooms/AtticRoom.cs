@@ -7,11 +7,11 @@ namespace NarrativeProject.Rooms
         internal static bool isKeyCollected;
 
         internal override string CreateDescription() =>
-@"In the attic, it's dark and cold.
-A chest is locked with the code [????].
-You can return to your [bedroom].
-";
-
+        @"In the attic, it's dark and cold.
+        A chest is locked with the code [????].
+        You can return to your [bedroom].
+        ";
+        
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)

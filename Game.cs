@@ -6,9 +6,19 @@ namespace NarrativeProject
     {
         List<Room> rooms = new List<Room>();
         Room currentRoom;
+       
+        // 
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
+
+        /* where is the constructor????
+         * >> there is no constructor we can se
+         * How is that possible??
+         * >> when class has no constructor
+         * >> a default (paramaterless) ctor is
+         * a default ctor never has a parameter
+         * error if trying to use one with pars...*/
 
         internal void Add(Room room)
         {
@@ -20,7 +30,7 @@ namespace NarrativeProject
         }
 
         internal string CurrentRoomDescription => currentRoom.CreateDescription();
-
+        
         internal void ReceiveChoice(string choice)
         {
             currentRoom.ReceiveChoice(choice);
