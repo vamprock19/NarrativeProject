@@ -1,10 +1,30 @@
-﻿using System;
+using System;
+
+
+///interface C { }
 
 namespace NarrativeProject.Rooms
 {
-    internal class Bedroom : Room
+    
+    internal class Bedroom : Room /*C*/ /// (: -> ineritance) (inside any method is called constrain
     {
 
+        /* override is reuse an exisating method*/
+        /* a class that derives an abstract class must override 
+         * every abstract members in order to be non-abstract*/
+
+
+        /// Expression-bodied member
+        ////int HP
+        ////{
+        ////    get 
+        ////    {
+        ////        return 5; 
+        ////    }
+        ////    set => 5;
+            
+        ////}
+        
         internal override string CreateDescription() =>
 @"You are in your bedroom.
 The [door] in front of you leads to your living room.
