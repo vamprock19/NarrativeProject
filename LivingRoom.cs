@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace NarrativeProject
+namespace NarrativeProject.Rooms
 {
-    internal class LivingRoom 
+    class LivingRoom : Room
     {
+        internal override string CreateDescription()
+        {
+            throw new NotImplementedException();
+        }
 
-       
+        internal override void ReceiveChoice(string choice)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
-
