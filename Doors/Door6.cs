@@ -1,4 +1,5 @@
-﻿namespace NarrativeProject
+﻿using System;
+namespace NarrativeProject
 {
     internal class Door6 : Door
     {
