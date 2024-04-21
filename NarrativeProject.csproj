@@ -44,14 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
-    <Compile Include="LivingRoom.cs" />
+    <Compile Include="Doors\Door6.cs" />
+    <Compile Include="Doors\Door5.cs" />
+    <Compile Include="GamePlay.cs" />
+    <Compile Include="Doors\Door1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoomSystem.cs" />
-    <Compile Include="Rooms\AtticRoom.cs" />
-    <Compile Include="Rooms\Bathroom.cs" />
-    <Compile Include="Rooms\Bedroom.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="Doors\Door4.cs" />
+    <Compile Include="Doors\Door3.cs" />
+    <Compile Include="Doors\Door2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
