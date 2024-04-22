@@ -33,9 +33,6 @@ There are 2 doors
             
 
         }
-        internal override void Hud()
-        {
-            
-        }
+        
     }
 }
