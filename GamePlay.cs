@@ -16,10 +16,22 @@ namespace NarrativeProject
         Door currentDoor;
         // LIST
         List<Door> doors  = new List<Door>();
+
+        
+        enum Players
+        {
+            sofia,
+            Dereck,
+            Player,
+            Karen,
+            Mars
+        }
+        
        
         public static string PlayerName(string playerName)
         {
             string Pname = playerName;
+            Pname = Players.Player.ToString();
             return Pname;
         }
         internal string CurrentDoorDescription => currentDoor.DoorDescription();
@@ -56,6 +68,15 @@ namespace NarrativeProject
         internal static void GameOver()
         {
             isFinished = true;
+        }
+        public static void Print(string text, int speed = 0)
+        {
+            foreach (char c in text)
+            {
+                Console.Write(c);
+                System.Threading.Thread.Sleep(speed);
+            }
+            Console.WriteLine();
         }
         
     }
