@@ -18,7 +18,7 @@ There are 2 doors
                     break;
                 case "2":
                     GamePlay.Print("Wrong door", 10);
-                    GamePlay.GameOver();
+                    GamePlay.Transition<Door2>();
                     break;
                 default:
                     Console.WriteLine("Invalid Command");

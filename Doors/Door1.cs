@@ -1,7 +1,7 @@
 ﻿using System;
 namespace NarrativeProject.Doors
 {
-    internal class Door1 : Door
+    internal class Door1 : Door 
     {
         internal override string DoorDescription() =>
 @" DOOR 1
@@ -18,6 +18,8 @@ There are 2 doors
                         "players was the one who enter the door and" +
                         "received a laser head shot", 10);
                     
+                    GamePlay.printHud();
+                    
                     GamePlay.Transition<Door2>();
                     break;
                 case "2":
@@ -28,7 +30,12 @@ There are 2 doors
                     Console.WriteLine("Invalid Command");
                     break;
             }
+            
 
+        }
+        internal override void Hud()
+        {
+            
         }
     }
 }

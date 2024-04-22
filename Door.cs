@@ -7,6 +7,7 @@
         internal abstract string DoorDescription();
         internal abstract void DoorChoice(string choice);
         
+            
     }
 }
 
