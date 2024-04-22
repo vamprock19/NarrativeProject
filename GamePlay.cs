@@ -18,22 +18,10 @@ namespace NarrativeProject
         List<Door> doors  = new List<Door>();
 
         
-        enum Players
-        {
-            sofia,
-            Dereck,
-            Player,
-            Karen,
-            Mars
-        }
+        
         
        
-        public static string PlayerName(string playerName)
-        {
-            string Pname = playerName;
-            Pname = Players.Player.ToString();
-            return Pname;
-        }
+      
         internal string CurrentDoorDescription => currentDoor.DoorDescription();
         internal void Add(Door door)
         {
@@ -68,6 +56,7 @@ namespace NarrativeProject
         internal static void GameOver()
         {
             isFinished = true;
+            GamePlay.Print("YOU DIED.   GAME OVER");
         }
         public static void Print(string text, int speed = 0)
         {
@@ -80,4 +69,6 @@ namespace NarrativeProject
         }
         
     }
+   
+
 }

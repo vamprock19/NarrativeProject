@@ -7,15 +7,10 @@ namespace NarrativeProject
     {
         static void Main(string[] args)
         {
-            string ps1 = "";
-            Print("What is your name player?", 20);
-            ps1 = Console.ReadLine();
-            Program.Print(GamePlay.PlayerName(ps1),10);
-
+           
 
             var gamePlay = new GamePlay();
-
-           
+            
 
             gamePlay.Add(new Lobby());
             gamePlay.Add(new Phone());
@@ -32,29 +27,20 @@ namespace NarrativeProject
 
             while(!gamePlay.isGameOver())
             {
-                
+                Player.printHud();
+                Console.WriteLine();    
                 Console.ForegroundColor = ConsoleColor.Green;
-                Print(gamePlay.CurrentDoorDescription , 10);///
+                GamePlay.Print(gamePlay.CurrentDoorDescription);///
                 Console.ForegroundColor = ConsoleColor.Red;
                 string Choice = Console.ReadLine().ToLower() ?? "";///
                 Console.ResetColor();
                 Console.Clear();///
                 gamePlay.DoorChoice(Choice);///
-                Program.Print(GamePlay.PlayerName(ps1), 10);
+               
             }
-            Print("You survive. This is the end, for now ",20);
-           
-            
-            
+            GamePlay.Print("You survive. This is the end, for now ",20);
+            Console.ReadLine();
         }
-        public static void Print(string text, int speed = 0)
-        {
-            foreach(char c in text)
-            {
-                Console.Write(c);
-                System.Threading.Thread.Sleep(speed);
-            }
-            Console.WriteLine();
-        }
+       
     }
 }
