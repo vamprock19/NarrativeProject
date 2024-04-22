@@ -17,7 +17,11 @@ namespace NarrativeProject
         // LIST
         List<Door> doors  = new List<Door>();
        
-        
+        public static string PlayerName(string playerName)
+        {
+            string Pname = playerName;
+            return Pname;
+        }
         internal string CurrentDoorDescription => currentDoor.DoorDescription();
         internal void Add(Door door)
         {

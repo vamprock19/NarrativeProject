@@ -4,7 +4,7 @@ namespace NarrativeProject.Doors
     internal  class Lobby : Door
     {
         
-        internal override string DoorDescription() =>
+        internal override string DoorDescription() => 
 @"You just woke up.You're in some extrange place. There is no exit just a DOOR
 in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE! 
 
@@ -16,6 +16,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
           {
                 case "1":
                     Console.WriteLine(" you see a phone");
+                    GamePlay.Transition<Phone>();
                     break;
                 case "2":
                     Console.WriteLine("Game on");

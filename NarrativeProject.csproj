@@ -48,6 +48,7 @@
     <Compile Include="Doors\Lobby.cs" />
     <Compile Include="Doors\Door6.cs" />
     <Compile Include="Doors\Door5.cs" />
+    <Compile Include="Doors\Phone.cs" />
     <Compile Include="GamePlay.cs" />
     <Compile Include="Doors\Door1.cs" />
     <Compile Include="Program.cs" />
