@@ -17,6 +17,7 @@ There are 2 doors
                     GamePlay.Print("Wrong door. luckly one of the other" +
                         "players was the one who enter the door and" +
                         "received a laser head shot", 10);
+                    
                     GamePlay.Transition<Door2>();
                     break;
                 case "2":

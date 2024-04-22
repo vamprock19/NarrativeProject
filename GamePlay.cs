@@ -67,7 +67,29 @@ namespace NarrativeProject
             }
             Console.WriteLine();
         }
-        
+
+
+        internal static void printHud()
+        {
+            GamePlay.PlayerHud();
+        }
+        internal static void PlayerHud()
+        {
+
+            var player = new Player();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("                                         Health: " + "          [" + player.Health + "]");
+            Console.WriteLine("                                         Sacrifices: " + "      [" + (int)GamePlay.playerDesitions.sacrifices + "]");
+        }
+        public enum playerDesitions
+        {
+            sacrifice = -30,
+            bHP = 20,
+            alive,
+            dead,
+            sacrifices = 4
+        }
+
     }
    
 

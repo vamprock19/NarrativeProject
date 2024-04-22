@@ -21,24 +21,7 @@ namespace NarrativeProject
                 }
             }
         }
-        internal static void printHud()
-        {
-            Player.PlayerHud();
-        }
-        internal static void PlayerHud()
-        {
-
-            var player = new Player();
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("                                         Health: " + "[" + player.Health + "]");
-        }
-        enum playerDesitions
-        {
-            sacrifice = -30, 
-            alive, 
-            dead, 
-            bHP = 20
-        }
+      
 
 
     }

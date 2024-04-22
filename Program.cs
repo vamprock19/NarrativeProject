@@ -27,7 +27,7 @@ namespace NarrativeProject
 
             while(!gamePlay.isGameOver())
             {
-                Player.printHud();
+                GamePlay.printHud();
                 Console.WriteLine();    
                 Console.ForegroundColor = ConsoleColor.Green;
                 GamePlay.Print(gamePlay.CurrentDoorDescription);///
