@@ -16,7 +16,7 @@ namespace NarrativeProject
         Door currentDoor;
         // LIST
         List<Door> doors  = new List<Door>();
-
+        
         
         
         
@@ -75,12 +75,30 @@ namespace NarrativeProject
         }
         internal static void PlayerHud()
         {
-
+           
             //var player = new healthSystem();
             //Console.ForegroundColor = ConsoleColor.Cyan;
             //Console.WriteLine("                                         Health: " + "          [" + player.Health + "]");
             //Console.WriteLine("                                         Sacrifices: " + "      [" + (int)GamePlay.playerDesitions.sacrifices + "]");
         }
+        internal int playerHealth(int health)
+        {
+            
+            health = 100;
+            
+            return health;
+        }
+        internal int playerSacrifice(int sacrifice)
+        {
+            sacrifice = 4;
+            return sacrifice;
+        }
+        internal int playerSacrificePlayer(int sacrificePlayer)
+        {
+            sacrificePlayer = 30;
+            return sacrificePlayer;
+        }
+        
         
 
     }

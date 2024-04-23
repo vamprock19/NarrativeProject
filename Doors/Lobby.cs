@@ -16,6 +16,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
           {
                 case "1":
                     Console.WriteLine(" you see a phone");
+                    Console.ReadLine();
                     GamePlay.Transition<Phone>();
                     break;
                 case "2":
@@ -26,6 +27,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
                         "to you being alive or dead :). You can sacrifice one of the players" +
                         "to avoid being killed but each sacrifice costs you -30 health points of your current HP." +
                         "GOOD LUCK");
+                    Console.ReadLine();
                     GamePlay.Transition<Door1>();
                     break;
                 default:
