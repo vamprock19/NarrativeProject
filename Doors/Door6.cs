@@ -25,7 +25,12 @@ There are 2 doors
                 case "2":
                     GamePlay.Print("Right door", 10);
                     GamePlay.GameFinished();
-                    GamePlay.HUD();
+                    Console.WriteLine();
+
+                    Console.WriteLine(healthSystem.Health);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
+
                     Console.ReadLine();
                     break;
 

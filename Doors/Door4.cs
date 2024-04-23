@@ -8,7 +8,7 @@ namespace NarrativeProject.Doors
         internal override string DoorDescription() =>
 @"DOOR 4
 There are 2 doors. Why there is a key?
-1 [ALIVE] 2 [DEAD]   3 [Pick up key]";
+1 [ALIVE] 2 [DEAD]   [hud]";
         internal override void DoorChoice(string choice)
         {
             var healthSystem = new HealthSystem();
@@ -24,10 +24,13 @@ There are 2 doors. Why there is a key?
                     GamePlay.Transition<BonusHp>();
                     break;
 
-                case "3":
-                    Console.WriteLine("You collected the key. Use the key?  1 [yes]  2 [no]");
-                    
+                case "hud":
+                    Console.WriteLine(healthSystem.Health);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
                     break;
+
+                    
 
                 default:
                     Console.WriteLine("Invalid Command");

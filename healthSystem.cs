@@ -8,9 +8,9 @@ namespace NarrativeProject
 {
      class HealthSystem
     {
-        private int defaulHealth = 100;
-        private int defaultPlayers = 4;
-        private int defaultKills = 4;
+        public int defaulHealth = 100;
+        public int defaultPlayers = 4;
+        public int defaultKills = 4;
         
         public int Health
         {

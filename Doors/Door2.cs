@@ -24,7 +24,9 @@ There are 2 doors
                     break;
 
                 case "hud":
-                    GamePlay.HUD();
+                    Console.WriteLine(healthSystem.Health);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
                     break;
 
                 default:

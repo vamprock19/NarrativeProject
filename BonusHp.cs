@@ -27,13 +27,16 @@ namespace NarrativeProject.Doors
                 case "3":
                     GamePlay.Print("Correct", 10);
                     healthSystem.Health = healthSystem.Health + 20;
-                    GamePlay.Transition<Door5>();
+                    Console.WriteLine();
+                    Console.WriteLine(healthSystem.Health);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
+                    Console.ReadLine();
+                    GamePlay.Transition<Door6>();
                     break;
-
-                case "HUD":
-                    GamePlay.HUD();
-                    break;
-
+                
+                   
+                   
                 default:
                     Console.WriteLine("Invalid Command");
                     break;

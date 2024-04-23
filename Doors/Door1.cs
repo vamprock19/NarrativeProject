@@ -12,6 +12,7 @@ There are 2 doors
         internal override void DoorChoice(string choice)
         {
             var healthSystem = new HealthSystem();
+            int playerHealth = 0;
             switch (choice)
             {
                 case "1":
@@ -21,12 +22,13 @@ There are 2 doors
 
                     if(choice == "1")
                     {
-                        healthSystem.Health -= 15;
-
-                        Console.WriteLine(healthSystem.Health);
+                        healthSystem.defaulHealth -= 15;
+                        
+                        Console.WriteLine(healthSystem.defaulHealth);
                         
                     }
-                    healthSystem.Health = healthSystem.Health;
+                    
+                    
                     GamePlay.Transition<Door2>();
                     break;
 
@@ -36,7 +38,9 @@ There are 2 doors
                     break;
 
                 case "hud":
-                    GamePlay.HUD();
+                    Console.WriteLine(playerHealth);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
                     break;
 
                 default:

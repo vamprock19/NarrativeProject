@@ -22,8 +22,10 @@ There are 2 doors
                     GamePlay.Transition<Door4>();
                    break;
 
-                case "HUD":
-                    GamePlay.HUD();
+                case "hud":
+                    Console.WriteLine(healthSystem.Health);
+                    Console.WriteLine(healthSystem.kills);
+                    Console.WriteLine(healthSystem.Players);
                     break;
 
                 default:
