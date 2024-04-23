@@ -19,6 +19,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
                     Console.ReadLine();
                     GamePlay.Transition<Phone>();
                     break;
+
                 case "2":
                     Console.WriteLine("Game on");
                     Console.WriteLine("there is a total of 5 players including you," +
@@ -30,6 +31,11 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
                     Console.ReadLine();
                     GamePlay.Transition<Door1>();
                     break;
+
+                case "HUD":
+                    GamePlay.HUD();
+                    break;
+
                 default:
                     Console.WriteLine("Invalid Command");
                     break;

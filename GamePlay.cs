@@ -12,15 +12,14 @@ namespace NarrativeProject
         internal bool isGameOver() => isFinished;
         static bool isFinished;
         static string nextDoor = "";
+        
         // CLASS 
         Door currentDoor;
         // LIST
         List<Door> doors  = new List<Door>();
-        
-        
-        
-        
        
+       
+       /// -------------------------------------------------------------------------------------------------
       
         internal string CurrentDoorDescription => currentDoor.DoorDescription();
         internal void Add(Door door)
@@ -67,37 +66,19 @@ namespace NarrativeProject
             }
             Console.WriteLine();
         }
+        internal static void HUD()
+        {
+            var healthSystem = new HealthSystem();
 
+            Console.WriteLine("Health: " + healthSystem.Health);
+            Console.WriteLine("Kills: " + healthSystem.kills);
+            Console.WriteLine("Players: " + healthSystem.Players);
+        }
+        internal static bool Key()
+        {
 
-        internal static void printHud()
-        {
-            GamePlay.PlayerHud();
         }
-        internal static void PlayerHud()
-        {
-           
-            //var player = new healthSystem();
-            //Console.ForegroundColor = ConsoleColor.Cyan;
-            //Console.WriteLine("                                         Health: " + "          [" + player.Health + "]");
-            //Console.WriteLine("                                         Sacrifices: " + "      [" + (int)GamePlay.playerDesitions.sacrifices + "]");
-        }
-        internal int playerHealth(int health)
-        {
-            
-            health = 100;
-            
-            return health;
-        }
-        internal int playerSacrifice(int sacrifice)
-        {
-            sacrifice = 4;
-            return sacrifice;
-        }
-        internal int playerSacrificePlayer(int sacrificePlayer)
-        {
-            sacrificePlayer = 30;
-            return sacrificePlayer;
-        }
+
         
         
 

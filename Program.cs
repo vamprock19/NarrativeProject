@@ -10,7 +10,7 @@ namespace NarrativeProject
            
 
             var gamePlay = new GamePlay();
-            
+            var healthSystem = new HealthSystem();
 
             gamePlay.Add(new Lobby());
             gamePlay.Add(new Phone());
@@ -22,13 +22,14 @@ namespace NarrativeProject
             gamePlay.Add(new Door5());
             gamePlay.Add(new Door6());
 
-           
-           
+            Console.WriteLine("Health: "+ healthSystem.Health);
+            Console.WriteLine("Kills: " + healthSystem.kills);
+            Console.WriteLine("Players: " + healthSystem.Players);
 
-            while(!gamePlay.isGameOver())
+            while (!gamePlay.isGameOver())
             {
-                GamePlay.printHud();
-                Console.WriteLine();    
+
+                
                 Console.ForegroundColor = ConsoleColor.Green;
                 GamePlay.Print(gamePlay.CurrentDoorDescription);///
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -38,8 +39,10 @@ namespace NarrativeProject
                 gamePlay.DoorChoice(Choice);///
                
             }
-            GamePlay.Print("You survive. This is the end, for now ",20);
-            Console.ReadLine();
+
+            
+            //GamePlay.Print("You survive. This is the end, for now ",20);
+            //Console.ReadLine();
         }
        
     }

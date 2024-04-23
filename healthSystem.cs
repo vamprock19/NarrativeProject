@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace NarrativeProject
 {
-    internal class Player
+     class HealthSystem
     {
         private int defaulHealth = 100;
+        private int defaultPlayers = 4;
+        private int defaultKills = -30;
+        
         public int Health
         {
             get => defaulHealth;
@@ -21,7 +24,67 @@ namespace NarrativeProject
                 }
             }
         }
-       
+        public int Players
+        {
+            get => defaultPlayers;
+            set
+            {
+                defaultPlayers= value;
+                if (defaultPlayers < 0)
+                {
+                    defaultPlayers = 0;
+                }
+            }
+        }
+        public int kills
+        {
+            get => defaultKills;
+            set
+            {
+                defaultKills = value;
+                if(defaultKills < 0)
+                {
+                    defaultKills = -0;
+                }
+            }
+        }
+
+        
+        //internal static void printHud()
+        //{
+        //    HealthSystem.PlayerHud();
+        //}
+        //internal  static void PlayerHud()
+        //{
+        //    int currentHealthValue = 100;
+        //    int currentSacrificeNum = 4;
+        //    int sacrifice = currentHealthValue - 30;
+
+        //    HealthSystem.playerHealth(currentHealthValue);
+
+        //    Console.ForegroundColor = ConsoleColor.Cyan;
+        //    Console.WriteLine("                                         Health: " + "          [" + currentHealthValue + "]");
+        //    Console.WriteLine("                                         Sacrifices: " + "      [" + currentSacrificeNum + "]");
+            
+        //    ;
+        //}
+        //internal static int playerHealth(int health)
+        //{
+
+        //    health = 100;
+        //    return health;
+        //}
+        //internal int playerSacrifice(int sacrifice)
+        //{
+        //    sacrifice = 4;
+        //    return sacrifice;
+        //}
+        //internal int playerSacrificePlayer(int sacrificePlayer)
+        //{
+        //    sacrificePlayer = 30;
+        //    return sacrificePlayer;
+        //}
+
 
 
     }
