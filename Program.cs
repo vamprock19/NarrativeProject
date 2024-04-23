@@ -22,9 +22,7 @@ namespace NarrativeProject
             gamePlay.Add(new Door5());
             gamePlay.Add(new Door6());
 
-            Console.WriteLine("Health: "+ healthSystem.Health);
-            Console.WriteLine("Kills: " + healthSystem.kills);
-            Console.WriteLine("Players: " + healthSystem.Players);
+            
 
             while (!gamePlay.isGameOver())
             {
