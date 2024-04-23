@@ -14,6 +14,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
             
           switch(choice)
           {
+                
                 case "1":
                     Console.WriteLine(" you see a phone");
                     Console.ReadLine();

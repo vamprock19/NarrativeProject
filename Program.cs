@@ -37,11 +37,11 @@ namespace NarrativeProject
                 gamePlay.DoorChoice(Choice);///
                
             }
-
-            
             //GamePlay.Print("You survive. This is the end, for now ",20);
             //Console.ReadLine();
+
+
         }
-       
+
     }
 }

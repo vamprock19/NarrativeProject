@@ -12,7 +12,24 @@ There are 2 doors
         
         internal override void DoorChoice(string choice)
         {
-            
+            var healthSystem = new HealthSystem();
+            switch (choice)
+            {
+                case "1":
+                    GamePlay.Print("Wrong door", 10);
+                    GamePlay.GameOver();
+                    Console.WriteLine();
+                    break;
+
+                case "2":
+                    GamePlay.Print("Right door", 10);
+                    GamePlay.Transition<Door6>();
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Command");
+                    break;
+            }
         }
     }
 

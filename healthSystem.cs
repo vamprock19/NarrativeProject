@@ -10,7 +10,7 @@ namespace NarrativeProject
     {
         private int defaulHealth = 100;
         private int defaultPlayers = 4;
-        private int defaultKills = -30;
+        private int defaultKills = 4;
         
         public int Health
         {

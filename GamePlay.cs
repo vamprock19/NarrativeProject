@@ -17,7 +17,7 @@ namespace NarrativeProject
         Door currentDoor;
         // LIST
         List<Door> doors  = new List<Door>();
-       
+        
        
        /// -------------------------------------------------------------------------------------------------
       
@@ -57,6 +57,11 @@ namespace NarrativeProject
             isFinished = true;
             GamePlay.Print("YOU DIED.   GAME OVER");
         }
+        internal static void GameFinished()
+        {
+            isFinished = true;
+            GamePlay.Print("Game Finished");
+        }
         public static void Print(string text, int speed = 0)
         {
             foreach (char c in text)
@@ -66,18 +71,18 @@ namespace NarrativeProject
             }
             Console.WriteLine();
         }
-        internal static void HUD()
-        {
-            var healthSystem = new HealthSystem();
+        //internal static void HUD()
+        //{
+        //    var healthSystem = new HealthSystem();
 
-            Console.WriteLine("Health: " + healthSystem.Health);
-            Console.WriteLine("Kills: " + healthSystem.kills);
-            Console.WriteLine("Players: " + healthSystem.Players);
-        }
-        internal static bool Key()
-        {
+        //    Console.WriteLine("Health: " + healthSystem.Health);
+        //    Console.WriteLine("Kills: " + healthSystem.kills);
+        //    Console.WriteLine("Players: " + healthSystem.Players);
+        //}
+        //internal static bool Key()
+        //{
 
-        }
+        //}
 
         
         

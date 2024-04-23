@@ -7,7 +7,7 @@ namespace NarrativeProject.Doors
         internal override string DoorDescription() =>
 @" DOOR 1
 There are 2 doors
-1 [ALIVE] 2 [DEAD]";
+1 [ALIVE] 2 [DEAD]   [hud]";
         
         internal override void DoorChoice(string choice)
         {
@@ -27,13 +27,14 @@ There are 2 doors
                         
                     }
                     healthSystem.Health = healthSystem.Health;
-
                     GamePlay.Transition<Door2>();
                     break;
+
                 case "2":
                     GamePlay.Print("Right door", 10);
                     GamePlay.Transition<Door2>();
                     break;
+
                 case "hud":
                     GamePlay.HUD();
                     break;
