@@ -28,12 +28,7 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
             //string t3 = n3.ToString();
             //string t4 = n4.ToString();
             int  pass = n1 + n2 + n3 + n4;
-            
-
-            
-            
-
-
+           
             switch (choice)
             {
                 
@@ -43,19 +38,19 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
                     break;
 
                 case "2":
-                    Console.WriteLine(" you go to the other side of the hallway " +
-                        "and you see a note with numbers ["+n1+n2+n3+n4+"] on a piece of paper");
+                    GamePlay.Print(" you go to the other side of the hallway " +
+                        "and you see a note with numbers ["+n1+n2+n3+n4+"] on a piece of paper",10);
                             int lo = 1;
 
-                            Console.WriteLine("type the passcode");
+                            GamePlay.Print("type the passcode",10);
                             switch(lo)
                             {
                                 case 1:
-                                 Console.WriteLine("type the passcode! Tip digit + digit + digit + digit ");
+                                 GamePlay.Print("type the passcode! Tip digit + digit + digit + digit ",10);
                                  Console.ReadLine();
                                  if(pass >0)
                                  {
-                                    Console.WriteLine("Something opens and you take a key ");
+                                    GamePlay.Print("Something opens and you take a key ");
                                     key = true;
                                  }
                                      
