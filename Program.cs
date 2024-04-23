@@ -27,9 +27,9 @@ namespace NarrativeProject
             while (!gamePlay.isGameOver())
             {
 
-                
+               
                 Console.ForegroundColor = ConsoleColor.Green;
-                GamePlay.Print(gamePlay.CurrentDoorDescription);///
+                GamePlay.Print(gamePlay.CurrentDoorDescription,10);///
                 Console.ForegroundColor = ConsoleColor.Red;
                 string Choice = Console.ReadLine().ToLower() ?? "";///
                 Console.ResetColor();
