@@ -7,7 +7,7 @@ namespace NarrativeProject.Doors
     internal class HallRoom: Door
     {
 
-
+        // dfkdfsdfsdkjkl
         internal override string DoorDescription() =>
 @" HALL ROOM
  To scape you have to find the exit. Some doors are locked.
