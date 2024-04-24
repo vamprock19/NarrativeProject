@@ -7,9 +7,9 @@ namespace NarrativeProject.Doors
       
         internal override string DoorDescription() => 
 @"You just woke up.You're in some extrange place. There is no exit just a DOOR
-in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE! 
+in front of you. In the hallway there is a front deskx. 
 
-1 [Inspect the desk]   2 [inspect the place]  [hud]";
+[INSPECT THE FRONT DESK]   [INSPECT THE POSTER]  [HUD]";
 
 
        
@@ -27,35 +27,36 @@ in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE!
             //string t2 = n2.ToString();
             //string t3 = n3.ToString();
             //string t4 = n4.ToString();
-            int  pass = n1 + n2 + n3 + n4;
+            int  digitSum = n1 + n2 + n3 + n4;
            
             switch (choice)
             {
                 
-                case "1":
+                case "inspect the front desk":
                     
                     GamePlay.Transition<Phone>();
                     break;
 
-                case "2":
+                case "inspect the poster":
                     GamePlay.Print(" you go to the other side of the hallway " +
                         "and you see a note with numbers ["+n1+n2+n3+n4+"] on a piece of paper",10);
                             int lo = 1;
-
-                            GamePlay.Print("type the passcode",10);
                             switch(lo)
                             {
                                 case 1:
                                  GamePlay.Print("type the passcode! Tip digit + digit + digit + digit ",10);
                                  Console.ReadLine();
-                                 if(pass >0)
-                                 {
-                                    GamePlay.Print("Something opens and you take a key ");
-                                    key = true;
-                                 }
-                                     
+                                    if(digitSum >0)
+                                    {
 
+                                        GamePlay.Print("Something opens and you take a key. You go back to the lobby. ");
+                                        key = true;
+                                        Console.ReadLine();
+                                        Console.Clear();
+                                    }
+                                    
                                 break;
+                                   
                             }
                     break;
 

@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BonusHp.cs" />
-    <Compile Include="Doors\GameStart.cs" />
+    <Compile Include="Doors\HallRoom.cs" />
     <Compile Include="Doors\Lobby.cs" />
     <Compile Include="Doors\Door6.cs" />
     <Compile Include="Doors\Door5.cs" />

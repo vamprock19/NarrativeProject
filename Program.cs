@@ -21,6 +21,7 @@ namespace NarrativeProject
             gamePlay.Add(new BonusHp());
             gamePlay.Add(new Door5());
             gamePlay.Add(new Door6());
+            gamePlay.Add(new HallRoom());
 
             
 

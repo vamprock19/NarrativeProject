@@ -7,21 +7,15 @@ namespace NarrativeProject.Doors
 
         internal override string DoorDescription() =>
 @"DOOR 4
-There are 2 doors. Why there is a key?
-1 [ALIVE] 2 [DEAD]   [hud]";
+
+ [HALL ROOM]   [HUD]";
         internal override void DoorChoice(string choice)
         {
             var healthSystem = new HealthSystem();
             switch (choice)
             {
-                case "1":
-                    GamePlay.Print("Wrong door", 10);
-                    GamePlay.GameOver();
-                    break;
-
-                case "2":
-                    GamePlay.Print("Right door", 10);
-                    GamePlay.Transition<BonusHp>();
+                case "hall room":
+                    GamePlay.Transition<HallRoom>();
                     break;
 
                 case "hud":
