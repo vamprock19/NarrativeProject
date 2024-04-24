@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace NarrativeProject.Doors
 {
     internal  class Lobby : Door
@@ -27,7 +27,7 @@ in front of you. In the hallway there is a front deskx.
             //string t2 = n2.ToString();
             //string t3 = n3.ToString();
             //string t4 = n4.ToString();
-            int  digitSum = n1 + n2 + n3 + n4;
+            int  pass = n1 + n2 + n3 + n4;
            
             switch (choice)
             {
@@ -37,17 +37,23 @@ in front of you. In the hallway there is a front deskx.
                     GamePlay.Transition<Phone>();
                     break;
 
-                case "inspect the poster":
+                case "2":
                     GamePlay.Print(" you go to the other side of the hallway " +
                         "and you see a note with numbers ["+n1+n2+n3+n4+"] on a piece of paper",10);
                             int lo = 1;
+
+                            GamePlay.Print("type the passcode",10);
                             switch(lo)
                             {
                                 case 1:
-                                 GamePlay.Print("type the passcode! Tip digit + digit + digit + digit ",10);
+                                 Console.WriteLine("type the passcode! Tip digit + digit + digit + digit ");
                                  Console.ReadLine();
-                                    if(digitSum >0)
-                                    {
+                                 if(pass >0)
+                                 {
+                                    GamePlay.Print("Something opens and you take a key ");
+                                    key = true;
+                                 }
+                                     
 
                                         GamePlay.Print("Something opens and you take a key. You go back to the lobby. ");
                                         key = true;

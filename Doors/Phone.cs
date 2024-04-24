@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace NarrativeProject.Doors
 {
      
@@ -22,10 +22,14 @@ namespace NarrativeProject.Doors
                     }
                     else
                     {
-                        GamePlay.Print("You open the door with the key you picked up",10);
-                        Console.ReadLine();
-                        GamePlay.Transition<HallRoom>();
-                        Console.Clear();
+                       "you have a maximum health of 100 HP, if health drops to 0 is Game Over. " +
+                       "You have to scape through taking desitions on each door which leads " +
+                       "to you being alive or dead :). You can sacrifice one of the players " +
+                       "to avoid being killed but each sacrifice costs you -30 health points of your current HP. " +
+                       "GOOD LUCK");
+                        GamePlay.Transition<Door1>();
+                        Console.WriteLine("there is a total of 5 players including you, " +
+                        Console.WriteLine("You open the door with the key you picked up");
 
                     }
                     break;
@@ -35,7 +39,7 @@ namespace NarrativeProject.Doors
                     break;
 
                 default:
-                    Console.WriteLine("Invalid Command",10);
+                    Console.WriteLine("Invalid Command");
                     break;
             }
         }

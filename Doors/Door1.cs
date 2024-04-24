@@ -4,9 +4,6 @@ namespace NarrativeProject.Doors
     internal class Door1 : Door 
     {
         
-
-
-
         internal override string DoorDescription() =>
 @" ////DOOR1////
 
