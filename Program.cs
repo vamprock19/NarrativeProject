@@ -7,7 +7,7 @@ namespace NarrativeProject
     {
         static void Main(string[] args)
         {
-           
+
 
             var gamePlay = new GamePlay();
             var healthSystem = new HealthSystem();
@@ -21,22 +21,22 @@ namespace NarrativeProject
             gamePlay.Add(new BonusHp());
             gamePlay.Add(new Door5());
             gamePlay.Add(new Door6());
-            gamePlay.Add(new HallRoom());
 
-            
+
+
 
             while (!gamePlay.isGameOver())
             {
 
-               
+
                 Console.ForegroundColor = ConsoleColor.Green;
-                GamePlay.Print(gamePlay.CurrentDoorDescription,10);///
+                GamePlay.Print(gamePlay.CurrentDoorDescription, 10);///
                 Console.ForegroundColor = ConsoleColor.Red;
                 string Choice = Console.ReadLine().ToLower() ?? "";///
                 Console.ResetColor();
                 Console.Clear();///
                 gamePlay.DoorChoice(Choice);///
-               
+
             }
             //GamePlay.Print("You survive. This is the end, for now ",20);
             //Console.ReadLine();

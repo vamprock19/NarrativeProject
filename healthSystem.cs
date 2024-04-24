@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace NarrativeProject
 {
-     class HealthSystem
+    class HealthSystem
     {
         public int defaulHealth = 100;
         public int defaultPlayers = 4;
         public int defaultKills = 4;
-        
+
         public int Health
         {
             get => defaulHealth;
@@ -29,7 +29,7 @@ namespace NarrativeProject
             get => defaultPlayers;
             set
             {
-                defaultPlayers= value;
+                defaultPlayers = value;
                 if (defaultPlayers < 0)
                 {
                     defaultPlayers = 0;
@@ -42,14 +42,15 @@ namespace NarrativeProject
             set
             {
                 defaultKills = value;
-                if(defaultKills < 0)
+                if (defaultKills < 0)
                 {
                     defaultKills = -0;
                 }
             }
+
         }
 
-        
+
         //internal static void printHud()
         //{
         //    HealthSystem.PlayerHud();
@@ -65,7 +66,7 @@ namespace NarrativeProject
         //    Console.ForegroundColor = ConsoleColor.Cyan;
         //    Console.WriteLine("                                         Health: " + "          [" + currentHealthValue + "]");
         //    Console.WriteLine("                                         Sacrifices: " + "      [" + currentSacrificeNum + "]");
-            
+
         //    ;
         //}
         //internal static int playerHealth(int health)

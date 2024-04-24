@@ -6,9 +6,8 @@
         // it applies to a class and methods
         internal abstract string DoorDescription();
         internal abstract void DoorChoice(string choice);
-  
-    }
-   
-}
 
- 
+    }
+
+
+}

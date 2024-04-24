@@ -1,20 +1,26 @@
 using System;
 namespace NarrativeProject.Doors
 {
-    
-    internal class Door2 : Door 
+
+    internal class Door2 : Door
     {
         internal override string DoorDescription() =>
 @"DOOR 2
-
-[HALL ROOM] [HUD]";
+There are 2 doors
+1 [ALIVE] 2 [DEAD]  [hud]";
         internal override void DoorChoice(string choice)
         {
             var healthSystem = new HealthSystem();
             switch (choice)
             {
-                case "hall room":
-                    GamePlay.Transition<HallRoom>();
+                case "1":
+                    GamePlay.Print("Right door", 10);
+                    GamePlay.Transition<Door3>();
+                    break;
+
+                case "2":
+                    GamePlay.Print("Wrong door", 10);
+                    GamePlay.GameOver();
                     break;
 
                 case "hud":
@@ -28,5 +34,6 @@ namespace NarrativeProject.Doors
                     break;
             }
         }
+
     }
 }

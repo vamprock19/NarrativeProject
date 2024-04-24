@@ -12,20 +12,20 @@ namespace NarrativeProject
         internal bool isGameOver() => isFinished;
         static bool isFinished;
         static string nextDoor = "";
-        
+
         // CLASS 
         Door currentDoor;
         // LIST
-        List<Door> doors  = new List<Door>();
-        
-       
-       /// -------------------------------------------------------------------------------------------------
-      
+        List<Door> doors = new List<Door>();
+
+
+        /// -------------------------------------------------------------------------------------------------
+
         internal string CurrentDoorDescription => currentDoor.DoorDescription();
         internal void Add(Door door)
         {
             doors.Add(door);
-            if(currentDoor == null)
+            if (currentDoor == null)
             {
                 currentDoor = door;
             }
@@ -40,11 +40,11 @@ namespace NarrativeProject
         {
             nextDoor = typeof(T).Name;
         }
-        internal  void TransitionCheck()
+        internal void TransitionCheck()
         {
-            foreach(var door in doors)
+            foreach (var door in doors)
             {
-                if(door.GetType().Name == nextDoor)
+                if (door.GetType().Name == nextDoor)
                 {
                     nextDoor = "";
                     currentDoor = door;
@@ -84,10 +84,11 @@ namespace NarrativeProject
 
         //}
 
-        
-        
+
+
+
 
     }
-   
+
 
 }

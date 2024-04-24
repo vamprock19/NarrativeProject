@@ -34,17 +34,16 @@ namespace NarrativeProject.Doors
                     Console.ReadLine();
                     GamePlay.Transition<Door6>();
                     break;
-                
-                   
-                   
+
+
+
                 default:
                     Console.WriteLine("Invalid Command");
                     break;
             }
         }
 
-       
+
+
     }
 }
-
-

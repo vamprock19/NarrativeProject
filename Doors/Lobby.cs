@@ -1,18 +1,18 @@
 using System;
 namespace NarrativeProject.Doors
 {
-    internal  class Lobby : Door
+    internal class Lobby : Door
     {
         internal static bool key;
-      
-        internal override string DoorDescription() => 
+
+        internal override string DoorDescription() =>
 @"You just woke up.You're in some extrange place. There is no exit just a DOOR
-in front of you. In the hallway there is a front deskx. 
+in front of you.It is you and 4 people. in the hallway there is a desk CHOOSE! 
 
-[INSPECT THE FRONT DESK]   [INSPECT THE POSTER]  [HUD]";
+1 [Inspect the desk]   2 [inspect the place]  [hud]";
 
 
-       
+
         internal override void DoorChoice(string choice)
         {
             Random rnd = new Random();
@@ -27,50 +27,49 @@ in front of you. In the hallway there is a front deskx.
             //string t2 = n2.ToString();
             //string t3 = n3.ToString();
             //string t4 = n4.ToString();
-            int  pass = n1 + n2 + n3 + n4;
-           
+            int pass = n1 + n2 + n3 + n4;
+
+
+
+
+
+
             switch (choice)
             {
-                
-                case "inspect the front desk":
-                    
+
+
+                case "1":
+
                     GamePlay.Transition<Phone>();
                     break;
 
                 case "2":
-                    GamePlay.Print(" you go to the other side of the hallway " +
-                        "and you see a note with numbers ["+n1+n2+n3+n4+"] on a piece of paper",10);
-                            int lo = 1;
+                    Console.WriteLine(" you go to the other side of the hallway " +
+                        "and you see a note with numbers [" + n1 + n2 + n3 + n4 + "] on a piece of paper");
+                    int lo = 1;
 
-                            GamePlay.Print("type the passcode",10);
-                            switch(lo)
+                    Console.WriteLine("type the passcode");
+                    switch (lo)
+                    {
+                        case 1:
+                            Console.WriteLine("type the passcode! Tip digit + digit + digit + digit ");
+                            Console.ReadLine();
+                            if (pass > 0)
                             {
-                                case 1:
-                                 Console.WriteLine("type the passcode! Tip digit + digit + digit + digit ");
-                                 Console.ReadLine();
-                                 if(pass >0)
-                                 {
-                                    GamePlay.Print("Something opens and you take a key ");
-                                    key = true;
-                                 }
-                                     
-
-                                        GamePlay.Print("Something opens and you take a key. You go back to the lobby. ");
-                                        key = true;
-                                        Console.ReadLine();
-                                        Console.Clear();
-                                    }
-                                    
-                                break;
-                                   
+                                Console.WriteLine("Something opens and you take a key ");
+                                key = true;
                             }
+
+
+                            break;
+                    }
                     break;
 
-      
+
                 case "hud":
-                    Console.WriteLine("Health "+healthSystem.Health);
+                    Console.WriteLine("Health " + healthSystem.Health);
                     Console.WriteLine("Change to kill " + healthSystem.kills);
-                    
+
                     break;
 
                 default:
@@ -78,6 +77,6 @@ in front of you. In the hallway there is a front deskx.
                     break;
             }
         }
-        
+
     }
 }
